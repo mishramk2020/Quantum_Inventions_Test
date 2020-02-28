@@ -38,7 +38,7 @@ public class StepsSignIn {
 	    // Write code here that turns the phrase above into concrete actions
 		
 		  homePage.navigateTo_HomePage();
-	  
+		  homePage.hideadvt();
 	   
 	}
 

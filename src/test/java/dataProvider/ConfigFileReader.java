@@ -53,6 +53,26 @@ public class ConfigFileReader {
 			
 			
 		}
+		
+		public String getexcelPath() {
+		String excelPath = properties.getProperty("excelPath");
+		if(excelPath!=null)return excelPath;
+		else throw new RuntimeException("Excelpath is not specified");
+		}
+		
+		public String getexcelFilename() {
+		String excelFilename =properties.getProperty("excelFileName");
+		if(excelFilename!=null)return excelFilename;
+		else throw new RuntimeException("Excel file name is not specified");
+		}
+		
+		public String getsheetName() {
+			String sheetName = properties.getProperty("sheetName");
+			if(sheetName!=null) return sheetName;
+			else throw new RuntimeException("Sheet name is not specified");
+		}
+		
+		
 			
 	
 

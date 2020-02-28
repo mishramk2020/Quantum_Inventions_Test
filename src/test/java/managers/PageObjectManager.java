@@ -3,6 +3,7 @@ package managers;
 import org.openqa.selenium.WebDriver;
 
 import pageObjects.HomePage;
+import pageObjects.RegisterPage;
 import pageObjects.SignInPage;
 
 public class PageObjectManager {
@@ -13,6 +14,8 @@ public class PageObjectManager {
 	 private HomePage homePage;
 	 
 	 private SignInPage signInPage;
+	 
+	 private RegisterPage registerPage;
 	 
 	 public PageObjectManager(WebDriver driver) {
 		 
@@ -28,6 +31,11 @@ public class PageObjectManager {
 		 
 		return (signInPage==null)?signInPage=new SignInPage(driver):signInPage;		 
 		 
+	 }
+	 
+	 public RegisterPage getRegisterPage() {
+		 
+		 return (registerPage==null)?registerPage= new RegisterPage(driver):registerPage;
 	 }
 	 
 	 
