@@ -35,7 +35,7 @@ public class Hooks  {
 	      // Take a screenshot...
 	    	
 	    	System.out.println("Scenario is failed");
-	    	context.getWebDriverManager().closeDriver();
+	    	//context.getWebDriverManager().closeDriver();
 	     // final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 	    // scenario.embed(screenshot, "image/png"); // ... and embed it in the report.
 	    }
