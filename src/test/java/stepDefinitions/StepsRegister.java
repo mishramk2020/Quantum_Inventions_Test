@@ -1,14 +1,8 @@
 package stepDefinitions;
-
-import org.openqa.selenium.WebDriver;
-
 import cucumber.TestContext;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import dataProvider.ConfigFileReader;
 import dataProvider.ExcelUtility;
-import managers.PageObjectManager;
 import pageObjects.HomePage;
 import pageObjects.RegisterPage;
 
@@ -37,7 +31,7 @@ public class StepsRegister {
 	}
 
 	@When("^user fill account details$")
-	public void user_fill_account_details() throws Throwable {
+	public StepsRegister user_fill_account_details() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions\
 		
 	    registerPage.getFirstname(1,0);
@@ -58,6 +52,8 @@ public class StepsRegister {
 	    registerPage.AgreeCheckbox();
 	    registerPage.click_createprofile();
 	    
+	    return this;
+	    
 	}
 
 	@Then("^user registered successfully$")
@@ -65,6 +61,7 @@ public class StepsRegister {
 	    // Write code here that turns the phrase above into concrete actions
 	   
 	}
+	
 	
 
 }

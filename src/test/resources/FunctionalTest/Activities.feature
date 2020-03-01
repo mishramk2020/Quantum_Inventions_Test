@@ -5,36 +5,29 @@ Description: This feature will automate few activities performed after sign in o
 Background: User launches Mapsynq website
 Given user launches Mapsynq
 
-#@smoke
-Scenario Outline: User is logged into Mapsynq website
-Given user launches Mapsynq
+@first
+Scenario Outline: User fails to login into Mapsynq website with invalid credentials
+#Given user launches Mapsynq
 When User enters "<username>" and "<password>"
 And User clicks sign in button
 Examples:
 |username|password|
 |admin|admin|
 
-    
 
-
-#@smoke
-Scenario: User logout from Mapsynq website
-Given user clicks logout
-Then user is succesfully logged out
-
-#@smoke
+@first
 Scenario: User search total number of Roadwork on Mapsynq website
-Given user launches Mapsynq
+#Given user launches Mapsynq
 When user search for number of roadworks
 Then user get total number of roadworks
 
-#@smoke
+@first
 Scenario: User search total number of heavy traffic on Mapsynq website
-Given user launches Mapsynq
+#Given user launches Mapsynq
 When user search for number of heavytraffics
 Then user get total number of heavy traffics
 
-@smoke
+@first
 Scenario: User get directions on Mapsynq website
 #Given user launches Mapsynq
 When user clicks on directions

@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import cucumber.TestContext;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pageObjects.HomePage;
@@ -50,6 +49,7 @@ public void user_clicks_get_directions() throws Throwable {
 public void user_is_able_to_get_directions_on_map() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	homePage.click_OK();
+	
 }
 
 

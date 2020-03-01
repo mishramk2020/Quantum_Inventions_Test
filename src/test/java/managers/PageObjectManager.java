@@ -20,11 +20,12 @@ public class PageObjectManager {
 	 public PageObjectManager(WebDriver driver) {
 		 
 		 this.driver=driver;
+		 
 	 }
 	 
 	 public HomePage getHomePage() {
 		return (homePage==null)?homePage=new HomePage(driver):homePage;
-		 
+		
 	 }
 	 
 	 public SignInPage getSignInPage() {

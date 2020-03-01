@@ -3,7 +3,6 @@ package dataProvider;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Properties;
-
 public class ConfigFileReader {
 	
 	private Properties properties;
@@ -28,6 +27,12 @@ public class ConfigFileReader {
 			
 		public String getDriverPath(){
 			 String driverPath = properties.getProperty("driverPath");
+			 if(driverPath!= null) return driverPath;
+			 else throw new RuntimeException("driverPath not specified in the Configuration.properties file."); 
+			 }
+		
+		public String getfirefoxDriverPath(){
+			 String driverPath = properties.getProperty("firefoxDriverPath");
 			 if(driverPath!= null) return driverPath;
 			 else throw new RuntimeException("driverPath not specified in the Configuration.properties file."); 
 			 }
@@ -71,6 +76,22 @@ public class ConfigFileReader {
 			if(sheetName!=null) return sheetName;
 			else throw new RuntimeException("Sheet name is not specified");
 		}
+		
+		public String getBrowser1() {
+			 String browserName = properties.getProperty("browser1");
+			 if(browserName == null || browserName.equals("chrome")) return "CHROME";
+			 else if(browserName.equalsIgnoreCase("firefox")) return "FIREFOX";
+			 else if(browserName.equals("iexplorer")) return "INTERNETEXPLORER";
+			 else throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
+			 }
+		
+		public String getBrowser2() {
+			 String browserName = properties.getProperty("browser2");
+			 if(browserName == null || browserName.equals("chrome")) return "CHROME";
+			 else if(browserName.equalsIgnoreCase("firefox")) return "FIREFOX";
+			 else if(browserName.equals("iexplorer")) return "INTERNETEXPLORER";
+			 else throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
+			 }
 		
 		
 			

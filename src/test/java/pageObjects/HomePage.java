@@ -1,8 +1,6 @@
 package pageObjects;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,12 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import dataProvider.ConfigFileReader;
 
 public class HomePage {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	WebDriverWait wait;
 	//= new WebDriverWait(driver,100);
 	ConfigFileReader config = new ConfigFileReader();
@@ -131,6 +128,7 @@ public int totalNoOfHeavyTraffic() {
 			return true;
 	}
 
+	
 	
 
 
