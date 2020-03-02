@@ -22,7 +22,7 @@ public class RegisterPage {
 	@FindBy(id="profile_first_name")
 	WebElement txt_firstname;
 	
-	@FindBy(id="profile_last_name")
+	@FindBy(id="profile_last_namee")
 	WebElement txt_lastname;
 	
 	

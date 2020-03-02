@@ -9,7 +9,7 @@ import pageObjects.SignInPage;
 public class PageObjectManager {
 	
 	
-	 private WebDriver driver;
+	 public static WebDriver driver;
 	 
 	 private HomePage homePage;
 	 

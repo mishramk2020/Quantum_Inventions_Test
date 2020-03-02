@@ -12,7 +12,7 @@ import dataProvider.ConfigFileReader;
 
 public class HomePage {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	WebDriverWait wait;
 	//= new WebDriverWait(driver,100);
 	ConfigFileReader config = new ConfigFileReader();
@@ -34,7 +34,7 @@ public class HomePage {
 	@FindBy(xpath="//div/a[@class='tab_button directions_tab sprite']")
 	public WebElement btn_directions;
 	
-	@FindBy(xpath="//input[@id='poi_from']")
+	@FindBy(xpath="//input[@id='poi_fromm']")
 	public WebElement txt_from;
 	
 	@FindBy(xpath="//input[@id='poi_to']")
