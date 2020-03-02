@@ -31,18 +31,20 @@ public class Hooks  {
  
 
 	@After
-	public void tearDown(Scenario scenario) {
+	public void tearDown(Scenario scenario) throws InterruptedException {
 	    if (scenario.isFailed()) {
 	      // Take a screenshot...
 	    	
 	    	System.out.println("Scenario is failed");
 	    	this.driver =TestContext.driver;
-	    //  final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-	    // scenario.embed(screenshot, "image/png"); // ... and embed it in the report.
-	     driver.close();
+	      final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	      scenario.embed(screenshot, "image/png"); // ... and embed it in the report.
+	      Thread.sleep(2000);
+	      this.driver.close();
 	    }
 	    else{
-	    driver.close();}
+	    this.driver =TestContext.driver;
+	    this.driver.close();}
 }
 
 }

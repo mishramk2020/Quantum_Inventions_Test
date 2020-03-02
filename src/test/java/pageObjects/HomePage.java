@@ -34,7 +34,7 @@ public class HomePage {
 	@FindBy(xpath="//div/a[@class='tab_button directions_tab sprite']")
 	public WebElement btn_directions;
 	
-	@FindBy(xpath="//input[@id='poi_fromm']")
+	@FindBy(xpath="//input[@id='poi_from']")
 	public WebElement txt_from;
 	
 	@FindBy(xpath="//input[@id='poi_to']")
